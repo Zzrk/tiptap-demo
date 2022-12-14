@@ -4,8 +4,8 @@ import Suggestion from '@tiptap/suggestion';
 import { Plugin, PluginKey } from 'prosemirror-state';
 import tippy from 'tippy.js';
 import { EXTENSION_PRIORITY_HIGHEST } from '../constants';
-import { EmojiList } from '../emoji-list';
-import { emojiSearch, emojisToName } from '../emoji-list/emojis';
+import { EmojiList } from '../wrappers/emoji-list';
+import { emojiSearch, emojisToName } from '../wrappers/emoji-list/emojis';
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {
