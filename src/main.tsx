@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './main.css'
-import WikiContent from './pages/EditorTest/components/WikiContent'
+import Editor from './pages/editor'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <WikiContent />
+    <Editor />
   </React.StrictMode>,
 )
