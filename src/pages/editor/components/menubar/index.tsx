@@ -1,5 +1,7 @@
 import { Editor } from '@tiptap/react'
 import { Space, Divider } from "antd"
+import { Heading } from './heading'
+import { FontFamily } from './font-family'
 import { Bold } from "./bold"
 import { Italic } from "./italic"
 import { Underline } from "./underline"
@@ -14,8 +16,10 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   }
 
   return (
-    <div className='flex justify-center border-b border-[rgba(28,31,35,.2)] my-5'>
+    <div className='flex justify-center my-5 border-y'>
       <Space className="max-w-full h-12 px-10 gap-1 flex items-center overflow-auto">
+        <Heading editor={editor}></Heading>
+        <FontFamily editor={editor}></FontFamily>
         <Bold editor={editor}></Bold>
         <Italic editor={editor}></Italic>
         <Underline editor={editor}></Underline>

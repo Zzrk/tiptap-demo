@@ -4,7 +4,9 @@ import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
 import Superscript from '@tiptap/extension-superscript'
 import Subscript from '@tiptap/extension-subscript'
-import './index.less'
+import TextStyle from '@tiptap/extension-text-style'
+import FontFamily from '@tiptap/extension-font-family'
+import './styles/index.less'
 
 export default () => {
   const editor = useEditor({
@@ -13,6 +15,8 @@ export default () => {
       Underline,
       Superscript,
       Subscript,
+      TextStyle,
+      FontFamily,
     ],
     content: `
         <h2>
@@ -47,9 +51,9 @@ export default () => {
   });
 
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-screen h-screen flex flex-col">
       <MenuBar editor={editor} />
-      <EditorContent className="w-full flex-1 overflow-auto" editor={editor} />
+      <EditorContent className="w-full flex-1 border-y overflow-auto" editor={editor} />
     </div>
   );
 };
