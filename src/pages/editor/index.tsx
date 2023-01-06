@@ -6,6 +6,11 @@ import Superscript from '@tiptap/extension-superscript'
 import Subscript from '@tiptap/extension-subscript'
 import TextStyle from '@tiptap/extension-text-style'
 import FontFamily from '@tiptap/extension-font-family'
+import TaskItem from '@tiptap/extension-task-item'
+import TaskList from '@tiptap/extension-task-list'
+import { FontSize } from '@/tiptap/extensions/font-size'
+import { Indent } from '@/tiptap/extensions/indent';
+import './semi.min.css'
 import './styles/index.less'
 
 export default () => {
@@ -17,6 +22,12 @@ export default () => {
       Subscript,
       TextStyle,
       FontFamily,
+      FontSize,
+      TaskList,
+      TaskItem.configure({
+        nested: true,
+      }),
+      Indent
     ],
     content: `
         <h2>

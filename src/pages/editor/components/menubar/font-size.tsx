@@ -1,19 +1,14 @@
 import { Select } from 'antd';
 import React, { useCallback } from 'react';
-import { Editor } from '../../core';
-// import { Title } from 'tiptap/core/extensions/title';
-import { useActive } from '../../hooks/use-active';
-import { useAttributes } from '../../hooks/use-attributes';
+import { Editor } from '@tiptap/react';
+import { useAttributes } from '@/tiptap/hooks/use-attributes';
 
 export const FONT_SIZES = [12, 13, 14, 15, 16, 19, 22, 24, 29, 32, 40, 48];
 
 export const FontSize: React.FC<{ editor: Editor }> = ({ editor }) => {
-  // const isTitleActive = useActive(editor, Title.name);
   const currentFontSize = useAttributes(editor, 'textStyle', { fontSize: '16px' }, (attrs) => {
     if (!attrs || !attrs.fontSize) return 16;
-
     const matches = attrs.fontSize.match(/\d+/);
-
     if (!matches || !matches[0]) return 16;
     return matches[0];
   });

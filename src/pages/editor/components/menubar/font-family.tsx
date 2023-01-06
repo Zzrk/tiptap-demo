@@ -1,7 +1,7 @@
 import { Select } from 'antd';
 import React, { useCallback } from 'react';
 import { Editor } from '@tiptap/react';
-import { useAttributes } from '../../../hooks/use-attributes';
+import { useAttributes } from '@/tiptap/hooks/use-attributes';
 
 export const FONT_FAMILIES = [
   {
