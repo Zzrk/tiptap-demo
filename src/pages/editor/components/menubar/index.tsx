@@ -18,6 +18,7 @@ import { Outdent } from './outdent'
 import { Undo } from './undo'
 import { Redo } from './redo'
 import { ClearNodeAndMarks } from './clear-node-and-marks'
+import { Align } from './align'
 
 const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   if (!editor) {
@@ -43,6 +44,10 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
         <Code editor={editor}></Code>
         <Superscript editor={editor}></Superscript>
         <Subscript editor={editor}></Subscript>
+
+        <Divider type="vertical"></Divider>
+
+        <Align editor={editor}></Align>
 
         <Divider type="vertical"></Divider>
 

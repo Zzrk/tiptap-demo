@@ -1,5 +1,7 @@
 import MenuBar from './components/menubar';
 import { EditorContent, useEditor } from '@tiptap/react';
+import Document from '@tiptap/extension-document';
+import Placeholder from '@tiptap/extension-placeholder'
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
 import Superscript from '@tiptap/extension-superscript'
@@ -8,6 +10,7 @@ import TextStyle from '@tiptap/extension-text-style'
 import FontFamily from '@tiptap/extension-font-family'
 import TaskItem from '@tiptap/extension-task-item'
 import TaskList from '@tiptap/extension-task-list'
+import TextAlign from '@tiptap/extension-text-align'
 import { FontSize } from '@/tiptap/extensions/font-size'
 import { Indent } from '@/tiptap/extensions/indent';
 import './semi.min.css'
@@ -16,7 +19,12 @@ import './styles/index.less'
 export default () => {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      Document.extend({
+        content: 'heading block*'
+      }),
+      StarterKit.configure({
+        document: false,
+      }),
       Underline,
       Superscript,
       Subscript,
@@ -27,12 +35,24 @@ export default () => {
       TaskItem.configure({
         nested: true,
       }),
-      Indent
+      Indent,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
+      }),
+      Placeholder.configure({
+        placeholder: ({ node }) => {
+          if (node.type.name === 'heading') {
+            return 'What’s the title?'
+          }
+
+          return 'Can you add some further context?'
+        },
+      }),
     ],
     content: `
-        <h2>
-          Hi there,
-        </h2>
+        <h1>
+          It’ll always have a heading …
+        </h1>
         <p>
           this is a <em>basic</em> example of <strong>tiptap</strong>. Sure, there are all kind of basic text styles you’d probably expect from a text editor. But wait until you see the lists:
         </p>

@@ -19,3 +19,11 @@
 @import './kityminder.less';
 @import './drag.less';
 @import './columns.less';
+
+.ProseMirror .is-empty::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #ced4da;
+  pointer-events: none;
+  height: 0;
+}
