@@ -11,6 +11,7 @@ import FontFamily from '@tiptap/extension-font-family'
 import TaskItem from '@tiptap/extension-task-item'
 import TaskList from '@tiptap/extension-task-list'
 import TextAlign from '@tiptap/extension-text-align'
+import Image from '@tiptap/extension-image'
 import { FontSize } from '@/tiptap/extensions/font-size'
 import { Indent } from '@/tiptap/extensions/indent';
 import './semi.min.css'
@@ -48,6 +49,9 @@ export default () => {
           return 'Can you add some further context?'
         },
       }),
+      Image.configure({
+        allowBase64: true
+      })
     ],
     content: `
         <h1>

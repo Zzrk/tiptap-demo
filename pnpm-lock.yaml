@@ -8,6 +8,7 @@ specifiers:
   '@tiptap/core': '>=2.0.0-beta.193 <3.0.0'
   '@tiptap/extension-document': 2.0.0-beta.209
   '@tiptap/extension-font-family': 2.0.0-beta.209
+  '@tiptap/extension-image': 2.0.0-beta.209
   '@tiptap/extension-placeholder': 2.0.0-beta.209
   '@tiptap/extension-subscript': 2.0.0-beta.209
   '@tiptap/extension-superscript': 2.0.0-beta.209
@@ -60,6 +61,7 @@ dependencies:
   '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
   '@tiptap/extension-document': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
   '@tiptap/extension-font-family': 2.0.0-beta.209_gcpwnt23nxb724tiu73zfw26iq
+  '@tiptap/extension-image': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
   '@tiptap/extension-placeholder': 2.0.0-beta.209_nv3r55gosyqqywjqk2ljir6ei4
   '@tiptap/extension-subscript': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
   '@tiptap/extension-superscript': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
@@ -2093,6 +2095,14 @@ packages:
     dependencies:
       '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
       prosemirror-state: 1.4.2
+    dev: false
+
+  /@tiptap/extension-image/2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua:
+    resolution: {integrity: sha512-Erjs9/vRud5TYATt7gJ1cBPNp0LAxtQ4mYZ+6Avpu0FfOWDv9WHXGtV85vJnbqKkRBf031L3dfLnYZPhTkS2sQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0-beta.193
+    dependencies:
+      '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
     dev: false
 
   /@tiptap/extension-italic/2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua:

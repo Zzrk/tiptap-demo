@@ -20,6 +20,8 @@ import { Redo } from './redo'
 import { ClearNodeAndMarks } from './clear-node-and-marks'
 import { Align } from './align'
 import { HorizontalRule } from './horizontal-rule'
+import { Blockquote } from './blockquote'
+import { UploadImage } from './upload-image'
 
 const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   if (!editor) {
@@ -60,7 +62,9 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
 
         <Divider type="vertical"></Divider>
 
+        <Blockquote editor={editor}></Blockquote>
         <HorizontalRule editor={editor}></HorizontalRule>
+        <UploadImage editor={editor}></UploadImage>
       </Space>
     </div>
   )
