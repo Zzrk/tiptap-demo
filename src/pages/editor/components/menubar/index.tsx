@@ -19,6 +19,7 @@ import { Undo } from './undo'
 import { Redo } from './redo'
 import { ClearNodeAndMarks } from './clear-node-and-marks'
 import { Align } from './align'
+import { HorizontalRule } from './horizontal-rule'
 
 const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   if (!editor) {
@@ -56,6 +57,10 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
         <TaskList editor={editor}></TaskList>
         <Indent editor={editor}></Indent>
         <Outdent editor={editor}></Outdent>
+
+        <Divider type="vertical"></Divider>
+
+        <HorizontalRule editor={editor}></HorizontalRule>
       </Space>
     </div>
   )
