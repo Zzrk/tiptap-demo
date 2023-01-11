@@ -12,8 +12,10 @@ import TaskItem from '@tiptap/extension-task-item'
 import TaskList from '@tiptap/extension-task-list'
 import TextAlign from '@tiptap/extension-text-align'
 import Image from '@tiptap/extension-image'
+import Color from '@tiptap/extension-color'
 import { FontSize } from '@/tiptap/extensions/font-size'
 import { Indent } from '@/tiptap/extensions/indent';
+import { BackgroundColor } from '@/tiptap/extensions/background-color';
 import './semi.min.css'
 import './styles/index.less'
 
@@ -51,7 +53,9 @@ export default () => {
       }),
       Image.configure({
         allowBase64: true
-      })
+      }),
+      Color,
+      BackgroundColor
     ],
     content: `
         <h1>

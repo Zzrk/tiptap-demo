@@ -6,6 +6,7 @@ specifiers:
   '@babel/plugin-syntax-flow': ^7.14.5
   '@babel/plugin-transform-react-jsx': ^7.14.9
   '@tiptap/core': '>=2.0.0-beta.193 <3.0.0'
+  '@tiptap/extension-color': 2.0.0-beta.209
   '@tiptap/extension-document': 2.0.0-beta.209
   '@tiptap/extension-font-family': 2.0.0-beta.209
   '@tiptap/extension-image': 2.0.0-beta.209
@@ -59,6 +60,7 @@ dependencies:
   '@babel/plugin-syntax-flow': 7.18.6_@babel+core@7.20.5
   '@babel/plugin-transform-react-jsx': 7.19.0_@babel+core@7.20.5
   '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
+  '@tiptap/extension-color': 2.0.0-beta.209_gcpwnt23nxb724tiu73zfw26iq
   '@tiptap/extension-document': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
   '@tiptap/extension-font-family': 2.0.0-beta.209_gcpwnt23nxb724tiu73zfw26iq
   '@tiptap/extension-image': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
@@ -2008,6 +2010,16 @@ packages:
       '@tiptap/core': ^2.0.0-beta.193
     dependencies:
       '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
+    dev: false
+
+  /@tiptap/extension-color/2.0.0-beta.209_gcpwnt23nxb724tiu73zfw26iq:
+    resolution: {integrity: sha512-AJfVaudk7acdgHrmz0xYVufh+W7x5oaekb6WN49WIyi0+4/BVmIJMdSl38fYE8ZWezmTn33+9pTUFmy7cL9CZA==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0-beta.193
+      '@tiptap/extension-text-style': ^2.0.0-beta.193
+    dependencies:
+      '@tiptap/core': 2.0.0-beta.209_rd5pjtxohzfgv2zee3iufpqkay
+      '@tiptap/extension-text-style': 2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua
     dev: false
 
   /@tiptap/extension-document/2.0.0-beta.209_f4ffqkgz5d3wev7su7t7l2rrua:

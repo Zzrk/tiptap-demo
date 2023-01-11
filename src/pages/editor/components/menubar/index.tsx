@@ -22,6 +22,8 @@ import { Align } from './align'
 import { HorizontalRule } from './horizontal-rule'
 import { Blockquote } from './blockquote'
 import { UploadImage } from './upload-image'
+import { TextColor } from './text-color'
+import { BackgroundColor } from './background-color'
 
 const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   if (!editor) {
@@ -47,6 +49,8 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
         <Code editor={editor}></Code>
         <Superscript editor={editor}></Superscript>
         <Subscript editor={editor}></Subscript>
+        <TextColor editor={editor}></TextColor>
+        <BackgroundColor editor={editor}></BackgroundColor>
 
         <Divider type="vertical"></Divider>
 
