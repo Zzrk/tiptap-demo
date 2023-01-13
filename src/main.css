@@ -16,3 +16,7 @@ html ::-webkit-scrollbar-track {
   border-radius: 4px;
   background: transparent;
 }
+
+.ant-btn-primary {
+  background-color: #1677ff;
+}

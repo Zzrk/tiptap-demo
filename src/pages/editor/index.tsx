@@ -13,6 +13,8 @@ import TaskList from '@tiptap/extension-task-list'
 import TextAlign from '@tiptap/extension-text-align'
 import Image from '@tiptap/extension-image'
 import Color from '@tiptap/extension-color'
+import Link from '@tiptap/extension-link'
+import Youtube from '@tiptap/extension-youtube'
 import { FontSize } from '@/tiptap/extensions/font-size'
 import { Indent } from '@/tiptap/extensions/indent';
 import { BackgroundColor } from '@/tiptap/extensions/background-color';
@@ -55,7 +57,9 @@ export default () => {
         allowBase64: true
       }),
       Color,
-      BackgroundColor
+      BackgroundColor,
+      Link,
+      Youtube
     ],
     content: `
         <h1>
