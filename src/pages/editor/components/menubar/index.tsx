@@ -26,6 +26,7 @@ import { TextColor } from './text-color'
 import { BackgroundColor } from './background-color'
 import { Link } from './link'
 import { Youtube } from './youtube'
+import { Table } from './table'
 
 const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
   if (!editor) {
@@ -72,6 +73,7 @@ const MenuBar: React.FC<{ editor: Editor }> = ({ editor }) => {
       <HorizontalRule editor={editor}></HorizontalRule>
       <UploadImage editor={editor}></UploadImage>
       <Youtube editor={editor}></Youtube>
+      <Table editor={editor}></Table>
     </Space>
   )
 }

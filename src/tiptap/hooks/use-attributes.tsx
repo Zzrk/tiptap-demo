@@ -23,7 +23,7 @@ export function useAttributes<T, R = T>(editor: Editor, attrbute: string, defaul
         }
       });
       const nextAttrs = mapFn(attrs);
-      console.log(editor.getAttributes(attrbute), attrs, nextAttrs)
+      // console.log(editor.getAttributes(attrbute), attrs, nextAttrs)
       if (deepEqual(prevValueCache.current, nextAttrs)) {
         return;
       }

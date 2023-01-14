@@ -1,6 +1,5 @@
-import { ExclamationCircleFilled, YoutubeOutlined } from '@ant-design/icons';
+import { YoutubeOutlined } from '@ant-design/icons';
 import { Button, Tooltip, Modal, Input, Form } from 'antd';
-import React, { useCallback, useState } from 'react';
 import { Editor } from '@tiptap/react';
 
 const { confirm } = Modal;

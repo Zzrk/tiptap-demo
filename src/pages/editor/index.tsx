@@ -15,6 +15,11 @@ import Image from '@tiptap/extension-image'
 import Color from '@tiptap/extension-color'
 import Link from '@tiptap/extension-link'
 import Youtube from '@tiptap/extension-youtube'
+import Table from '@tiptap/extension-table'
+import TableCell from '@tiptap/extension-table-cell'
+import TableHeader from '@tiptap/extension-table-header'
+import TableRow from '@tiptap/extension-table-row'
+import BubbleMenu from '@tiptap/extension-bubble-menu'
 import { FontSize } from '@/tiptap/extensions/font-size'
 import { Indent } from '@/tiptap/extensions/indent';
 import { BackgroundColor } from '@/tiptap/extensions/background-color';
@@ -59,7 +64,21 @@ export default () => {
       Color,
       BackgroundColor,
       Link,
-      Youtube
+      Youtube,
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
+      BubbleMenu.configure({
+        // element: document.querySelector('.bubble-menu'),
+        shouldShow: ({ editor, view, state, oldState, from, to }) => {
+          // only show the bubble menu for images and links
+          console.log(editor.isActive('blockquote'))
+          return false
+        },
+      })
     ],
     content: `
         <h1>
